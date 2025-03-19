@@ -8,13 +8,13 @@ permissions:
 jobs:
   build:
     name: 'QMK Userspace Build'
-    uses: qmk/.github/.github/workflows/qmk_userspace_build.yml@main
+    uses: qmk/.github/.github/workflows/qmk_userspace_build.yml@my-new-branch
     with:
       qmk_repo: gkbdh/bastardkb-qmk
       qmk_ref: my-branch  
 
   publish:
     name: 'QMK Userspace Publish'
-    uses: qmk/.github/.github/workflows/qmk_userspace_publish.yml@main
+    uses: qmk/.github/.github/workflows/qmk_userspace_publish.yml@my-new-branch
     if: always() && !cancelled()
     needs: build
